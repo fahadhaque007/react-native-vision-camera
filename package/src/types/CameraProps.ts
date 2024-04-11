@@ -122,7 +122,7 @@ export interface CameraProps extends ViewProps {
    */
   torchLevel?: number
   /**
-   * Specifies the a delay before the torch turns on during a recording session
+   * Specifies a delay before the torch turns on during a recording session.
    *
    * Make sure the given {@linkcode device} has a torch (see {@linkcode CameraDevice.hasTorch device.hasTorch}).
    *
@@ -130,7 +130,7 @@ export interface CameraProps extends ViewProps {
    */
   torchDelay?: number
   /**
-   * Specifies the amount of time the torch is on during a recording session
+   * Specifies the duration for which the torch is on during a recording session.
    *
    * Make sure the given {@linkcode device} has a torch (see {@linkcode CameraDevice.hasTorch device.hasTorch}).
    *
@@ -138,14 +138,14 @@ export interface CameraProps extends ViewProps {
    */
   torchDuration?: number
   /**
-   * Specifies the background torch level of the current camera. This value ranges from 0.0 to 1.0
+   * Specifies the background torch level of the current camera. This value ranges from 0.0 to 1.0.
    *
    * Make sure the given {@linkcode device} has a torch (see {@linkcode CameraDevice.hasTorch device.hasTorch}).
    *
    */
   backgroundLevel?: number
   /**
-   * Specifies the a delay before the background torch turns on during a recording session
+   * Specifies a delay before the background torch turns on during a recording session.
    *
    * Make sure the given {@linkcode device} has a torch (see {@linkcode CameraDevice.hasTorch device.hasTorch}).
    *
@@ -153,7 +153,7 @@ export interface CameraProps extends ViewProps {
    */
   backgroundDelay?: number
   /**
-   * Specifies the amount of time the background torch is on during a recording session
+   * Specifies the duration for which the background torch is on during a recording session.
    *
    * Make sure the given {@linkcode device} has a torch (see {@linkcode CameraDevice.hasTorch device.hasTorch}).
    *
