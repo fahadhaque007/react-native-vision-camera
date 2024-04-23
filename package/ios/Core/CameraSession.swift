@@ -321,7 +321,7 @@ class CameraSession: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVC
     }
   }
 
-  internal final func setBackgroundLight(_ backgroundLevel: NSNumber, torchMode: String) {
+  final func setBackgroundLight(_ backgroundLevel: NSNumber, torchMode: String) {
     guard let device = videoDeviceInput?.device else {
       return
     }
@@ -348,7 +348,7 @@ class CameraSession: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVC
       try device.lockForConfiguration()
       device.torchMode = torchMode
       if torchMode == .on {
-        print("torchLevel:" +  backgroundLevel.description)
+        print("torchLevel:" + backgroundLevel.description)
         let torchLevel = Float(backgroundLevel)
         try device.setTorchModeOn(level: torchLevel)
       }
@@ -357,8 +357,8 @@ class CameraSession: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVC
       return
     }
   }
-    
-  internal final func setTorchMode(_ torchMode: String, torchLevelVal: NSNumber) {
+
+  final func setTorchMode(_ torchMode: String, torchLevelVal: NSNumber) {
     guard let device = videoDeviceInput?.device else {
       return
     }
@@ -385,7 +385,7 @@ class CameraSession: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVC
       try device.lockForConfiguration()
       device.torchMode = torchMode
       if torchMode == .on {
-        print("torchLevel:" +  torchLevelVal.description)
+        print("torchLevel:" + torchLevelVal.description)
         let torchLevel = Float(torchLevelVal)
         try device.setTorchModeOn(level: torchLevel)
       }
