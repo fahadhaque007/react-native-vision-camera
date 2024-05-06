@@ -23,7 +23,7 @@ const updatedData = JSON.stringify(packageJson, null, 2);
 // Write the updated JSON string back to the package.json file
 fs.writeFileSync('package/package.json', updatedData + '\n', 'utf8');
 
-exec('cd package && npm pack', (error, stdout, stderr) => {
+exec('cd package && npm publish', (error, stdout, stderr) => {
   if (error) {
     console.error(`exec error: ${error}`);
     return;
